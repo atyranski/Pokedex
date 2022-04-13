@@ -1,0 +1,28 @@
+.navbar_container{
+    background: var(--primary-red);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--primary-gray);
+    flex: 0 1 auto;
+
+    .logo_container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        img {
+            width: 2.5rem;
+            margin-right: .5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--white);
+            font-size: 2rem;
+        }
+    }
+
+
+}
