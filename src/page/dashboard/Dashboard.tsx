@@ -2,33 +2,23 @@ import './style.scss';
 
 import React from 'react';
 import Pokemons from '../../component/pokemons/Pokemons';
+import Filters from '../../component/filters/Filters';
 
 export default function Dashboard() {
-  // const [data, setData] = useState(null);
-  // async function componentDidMount() {
-  //   try {
-  //     const res = await fetch('https://pokeapi.co/api/v2/pokemon/');
-  //     const printer = await res.json();
-  //     setData(printer.brand);
-  //     console.log(data);
-  //     return printer;
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // }
-  // componentDidMount();
-
-
-
-
   return (
-    <div className="dashboard_container">
-      <div className="page_container">
-        <div className="main">
-            Dashboard
+    <>
+      <Filters />
+      <div className="dashboard">
+        <div className="container">
+          <div className="list">
             <Pokemons />
+            <button className="load_more">Load more</button>
+          </div>
+          <div className="details">
+
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

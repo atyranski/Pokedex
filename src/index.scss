@@ -1,10 +1,16 @@
 :root {
   font-size: 16px;
 
+// Colors
   --primary-gray: #423b3b;
   --primary-red: #ff6b57;
   --primary-light-gray: #dbdbdb;
   --white: #ffffff;
+
+// Sizes
+  --content-width: 70%;
+  --content-max-width: 800px;
+
 }
 
 html{
@@ -30,5 +36,25 @@ code {
 #root{
   display: flex;
   flex-flow: column;
+  align-items: center;
   height: 100%;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-light-gray) var(--white);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: .5rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: .25rem;
+  background-color: var(--primary-light-gray);
 }
