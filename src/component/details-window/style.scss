@@ -1,17 +1,41 @@
 .details{
-    height: 64vh;
+    // height: 38vh;
     width: 30%;
     box-sizing: border-box;
     background: var(--primary-light-gray);
     border: 1px solid var(--primary-gray);
     border-radius: .5rem;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 2rem;
     margin-left: 1rem;
     color: var(--primary-gray);
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .whos_that_pokemon{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+
+        .title{
+            text-align: center;
+            width: 100%;
+            font-size: 2rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .sprite{
+            width: 100%;
+            text-align: center;
+        }
+
+        .description{
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--primary-gray);
+        }
+    }
 
     .name{
         text-align: right;

@@ -1,6 +1,5 @@
 import './style.scss';
 
-// import avatar from '../../image/avatar/avatar.jpg';
 import logo from '../../image/logo/icon_64.png';
 
 import { Link } from "react-router-dom"
