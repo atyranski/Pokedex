@@ -18,7 +18,11 @@ export const ListElement = ( { pokemon }: Props) => {
         {service.status === 'loaded' &&
             <div className='pokemon'>
                 <div className="name">{ service.payload.name }</div>
-                <div className="type">{ service.payload.weight }</div>
+                <div className="types"> {
+                    service.payload.types.map((type: string) => (
+                        <span key={type}> { type } </span>
+                    ))}    
+                </div>
                 <div className="sprite">
                     <img src={ service.payload.sprite }/>
                 </div>

@@ -5,6 +5,6 @@ export interface Pokemon{
     height: number;
     weight: number;
     abilities: string[];
-    type: string[];
     sprite: string;
+    types: string[];
 }
