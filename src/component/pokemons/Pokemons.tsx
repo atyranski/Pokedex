@@ -6,9 +6,13 @@ import usePokemonsService from '../../service/usePokemonsService';
 import ListElement from '../list-element/ListElement';
 
 const Pokemons: React.FC<{}> = () => {
-  const limit = 20;
-  let range = 20;
-  let service = usePokemonsService({ offset: 0, limit: range });
+  const range = 20;
+  const [limit, setLimit ] = useState(range);
+  const service = usePokemonsService({ offset: 0, limit: limit });
+
+  function onClick(){
+    setLimit(limit + range);
+  }
 
   return (
     <>
@@ -19,11 +23,12 @@ const Pokemons: React.FC<{}> = () => {
             <ListElement key={pokemon.name} pokemon={ pokemon }/>
           ))}
         {service.status === 'error' && (
-          <div>Error, the backend moved to the dark side.</div>)}
+          <div>Error, currently pokemons don't want to show up ://</div>)}
       </div>
       <button
         type="button"
-        className="load_more">Load more</button>
+        className="load_more"
+        onClick={onClick}>Load more</button>
     </>
   );
 };

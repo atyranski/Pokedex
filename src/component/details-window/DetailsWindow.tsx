@@ -2,17 +2,10 @@ import './style.scss';
 
 import React from 'react';
 
+import { useDetailsWindowContext } from '../../context/DetailsWindowContext';
+
 export const DetailsWindow = () => {
-    const pokemon = {
-        abilities: [ "overgrow", "chlorophyll" ],
-        base_expirience: 64,
-        height: 7,
-        id: 1,
-        name: "bulbasaur",
-        sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-        types: [ "grass", "poison" ],
-        weight: 69,
-    }
+    const { pokemon } = useDetailsWindowContext();
 
     return (
         <div className="details">

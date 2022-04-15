@@ -5,15 +5,22 @@ import React from 'react';
 import { Pokemon } from '../../interface/Pokemon';
 import usePokemonService from '../../service/usePokemonService';
 
+import { useDetailsWindowContext } from '../../context/DetailsWindowContext';
+
 type Props = {
     pokemon: Pokemon;
 };
 
 export const ListElement = ( { pokemon }: Props) => {
     const service = usePokemonService( pokemon );
+    const { setPokemon } = useDetailsWindowContext(); 
+
+    function onClick() {
+        if(service.status === 'loaded') setPokemon(service.payload);
+    }
 
     return (
-        <div className="list_element">
+        <div onClick={() => onClick()} className="list_element">
         {service.status === 'loading' && <div>Loading...</div>}
         {service.status === 'loaded' &&
             <div className='pokemon'>

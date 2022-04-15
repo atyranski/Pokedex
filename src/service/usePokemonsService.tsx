@@ -19,16 +19,9 @@ export const useGetPokemonsService = ({ offset, limit }: Props) => {
   useEffect(() => {
     fetch('https://pokeapi.co/api/v2/pokemon?offset=' + offset + "&limit=" + limit)
       .then(response => response.json())
-      .then(response => {
-        // console.log(response);
-        // zapisać link do nexta
-
-        setResult({ status: 'loaded', payload: response })
-      } )
+      .then(response => setResult({ status: 'loaded', payload: response }))
       .catch(error => setResult({ status: 'error', error }));
-  }, []);
-
-  console.log(result);
+  }, [limit]);
 
   return result;
 };
