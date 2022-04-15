@@ -3,17 +3,22 @@ import './style.scss';
 import React from 'react';
 
 import { useDetailsWindowContext } from '../../context/DetailsWindowContext';
-import placholder from '../../image/details/placeholder_background.png';
+import placholder_black from '../../image/details/placeholder_black.png';
+import placholder_white from '../../image/details/placeholder_white.png';
+
+import { useContext } from 'react';
+import { ThemeContext } from './../../context/ThemeContext'
 
 export const DetailsWindow = () => {
     const { pokemon } = useDetailsWindowContext();
+    const { theme } = useContext(ThemeContext);
 
     return (
-        <div className="details">
+        <div className={`details details_${theme}`}>
             {pokemon.id == -1 && 
                 <div className="whos_that_pokemon">
                     <div className="title">Who's that pokemon?</div>
-                    <div className="sprite"><img src={ placholder}/></div>
+                    <div className="sprite"><img src={ theme === 'light' ? placholder_black : placholder_white }/></div>
                     <div className="description">
                         Pick one from the list on the left to get some details!
                     </div>

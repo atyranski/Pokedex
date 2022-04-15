@@ -8,6 +8,8 @@ import DetailsWindow from '../../component/details-window/DetailsWindow';
 import { DetailsWindowContext } from '../../context/DetailsWindowContext';
 import { Pokemon } from '../../interface/Pokemon';
 
+import { useContext } from 'react';
+import { ThemeContext } from './../../context/ThemeContext'
 
 export default function Dashboard() {
   const initial_pokemon = {
@@ -21,11 +23,12 @@ export default function Dashboard() {
     weight: 0,
   }
   const [pokemon, setPokemon] = useState<Pokemon>(initial_pokemon)
+  const { theme } = useContext(ThemeContext);
 
   return (
     <DetailsWindowContext.Provider value={{ pokemon, setPokemon }}>
-      <Filters />
-      <div className="dashboard">
+      {/* <Filters /> */}
+      <div className={`dashboard dashboard_${theme}`}>
         <div className="container">
           <div className="list">
             <Pokemons />

@@ -1,0 +1,50 @@
+.loading_indicator{
+    border-radius: .25rem;
+    width: 18%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    opacity: .7;
+    
+    .image{
+        img{
+            animation: rotate 1.5s linear infinite; 
+        }
+    }
+}
+
+@keyframes rotate{
+    to{ transform: rotate(360deg); }
+}
+
+// Themes colors adjustments
+.loading_indicator_light{
+    color: var(--black);
+
+    &:hover{
+        background: var(--primary-light-gray);
+    }
+
+    .pokemon{
+        .name{
+            border-bottom: 1px solid var(--primary-gray);
+        }
+    }
+}
+
+.loading_indicator_dark{
+    color: var(--white);
+
+    &:hover{
+        background: var(--primary-gray);
+    }
+
+    .pokemon{
+        .name{
+            border-bottom: 1px solid var(--primary-light-gray);
+        }
+    }
+}

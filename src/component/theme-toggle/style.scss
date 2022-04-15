@@ -1,0 +1,40 @@
+.theme_toggle{
+    width: 3.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    transition: var(--transition);
+    border-radius: .5rem;
+
+    .switch{
+        background: var(--primary-gray);
+        cursor: pointer;
+        border-radius: .5rem;
+        padding: .2rem .5rem;
+        transition: var(--transition);
+    }
+}
+
+.theme_toggle_light{
+    justify-content: flex-start;
+    background: var(--primary-light-gray);
+    border: 1px solid var(--primary-gray);
+
+    .switch{
+        background: var(--primary-gray);
+        color: var(--white);
+        border: .2rem solid var(--primary-light-gray)
+    }
+}
+
+.theme_toggle_dark{
+    justify-content: flex-end;
+    background: var(--primary-gray);
+    border: 1px solid var(--primary-light-gray);
+
+    .switch{
+        background: var(--primary-light-gray);
+        color: var(--primary-gray);
+        border: .2rem solid var(--primary-gray)
+    }
+}

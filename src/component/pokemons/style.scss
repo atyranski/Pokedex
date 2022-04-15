@@ -7,19 +7,33 @@
     justify-content: center;
 }
 
-button{
+.load_more{
     margin-top: 1rem;
     padding: .5rem;
     width: 30%;
     min-width: 5rem;
     cursor: pointer;
-    transition: .2s ease-in;
-    background: var(--white);
+    transition: var(--transition);
     border: none;
     border-radius: .5rem;
+}
+
+.load_more_light{
+    background: var(--white);
+    color: var(--primary-gray);
 
     &:hover{
         background: var(--primary-red);
+        color: var(--white);
+    }
+}
+
+.load_more_dark{
+    background: var(--secondary-gray);
+    color: var(--white);
+
+    &:hover{
+        background: var(--primary-navy);
         color: var(--white);
     }
 }

@@ -2,12 +2,12 @@
     // height: 38vh;
     width: 30%;
     box-sizing: border-box;
-    background: var(--primary-light-gray);
-    border: 1px solid var(--primary-gray);
+    // background: var(--primary-light-gray);
+    // border: 1px solid var(--primary-gray);
     border-radius: .5rem;
     padding: 1rem 2rem 2rem;
     margin-left: 1rem;
-    color: var(--primary-gray);
+    // color: var(--primary-gray);
 
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
         .description{
             margin-top: 1rem;
             padding-top: 1rem;
-            border-top: 1px dashed var(--primary-gray);
+            // border-top: 1px dashed var(--primary-gray);
         }
     }
 
@@ -42,7 +42,9 @@
         width: 100%;
         text-transform: capitalize;
         font-size: 2rem;
-        border-bottom: 1px solid var(--primary-gray);
+        padding-bottom: .25rem;
+        margin-bottom: .5rem;
+        // border-bottom: 1px solid var(--primary-gray);
         font-family: 'Open Sans', sans-serif;
     }
     
@@ -60,6 +62,50 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        // color: var(--primary-red);
+
+        span:nth-of-type(1) {
+            // color: var(--primary-gray);
+        }
+    }
+
+    .abilities{
+        margin-top: 1rem;
+        padding-top: 1rem;
+        // border-top: 1px dashed var(--primary-gray);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        // color: var(--primary-red);
+
+        span{
+            text-transform: capitalize;
+        }
+
+        span:nth-of-type(1) {
+            // color: var(--primary-gray);
+        }
+    }
+}
+
+.details_light{
+    background: var(--primary-light-gray);
+    border: 1px solid var(--primary-gray);
+    color: var(--primary-gray);
+
+    .whos_that_pokemon{
+        .description{
+            border-top: 1px dashed var(--primary-gray);
+        }
+    }
+
+    .name{
+        border-bottom: 1px solid var(--primary-gray);
+    }
+
+    .height,
+    .weight,
+    .base_expirience{
         color: var(--primary-red);
 
         span:nth-of-type(1) {
@@ -68,20 +114,46 @@
     }
 
     .abilities{
-        margin-top: 1rem;
-        padding-top: 1rem;
         border-top: 1px dashed var(--primary-gray);
-        width: 100%;
-        display: flex;
-        flex-direction: column;
         color: var(--primary-red);
-
-        span{
-            text-transform: capitalize;
-        }
 
         span:nth-of-type(1) {
             color: var(--primary-gray);
+        }
+    }
+}
+
+.details_dark{
+    background: var(--primary-gray);
+    border: 1px solid var(--primary-light-gray);
+    color: var(--primary-light-gray);
+
+    .whos_that_pokemon{
+        .description{
+            border-top: 1px dashed var(--primary-light-gray);
+        }
+    }
+
+    .name{
+        border-bottom: 1px solid var(--primary-light-gray);
+    }
+
+    .height,
+    .weight,
+    .base_expirience{
+        color: var(--secondary-navy);
+
+        span:nth-of-type(1) {
+            color: var(--primary-light-gray);
+        }
+    }
+
+    .abilities{
+        border-top: 1px dashed var(--primary-light-gray);
+        color: var(--secondary-navy);
+
+        span:nth-of-type(1) {
+            color: var(--primary-light-gray);
         }
     }
 }

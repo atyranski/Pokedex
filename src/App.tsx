@@ -1,22 +1,38 @@
-import React from 'react';
 import './App.scss';
+import Cookies from 'universal-cookie';
 
+// React components
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// Pages
 import Dashboard from './page/dashboard/Dashboard';
 import PageNotFound from './page/page-not-found/PageNotFound';
 
+// Components
 import Navbar from './component/navbar/Navbar';
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// Contexts
+import { ThemeContext } from './context/ThemeContext';
 
+// Actuall app
 function App() {
+  const cookies = new Cookies();
+  if(cookies.get('theme') == undefined) cookies.set('theme', 'light', { path: '/' });
+
+  const [theme, setTheme] = useState<string>(cookies.get('theme'));
+
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeContext.Provider>
+
   );
 }
 
