@@ -69,3 +69,32 @@
         }
     }
 }
+
+
+@media screen and (min-width: 1024px){
+    .list_element{
+        width: 18%;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .list_element{
+        width: 23%;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 570px) and (max-width: 768px){
+    .list_element{
+        width: 48%;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 569px){
+    .list_element{
+        width: 48%;
+        height: 150px;
+    }
+}
