@@ -1,16 +1,21 @@
+// Styles
 import './style.scss';
 
-import React, { useState } from 'react';
+// React components
+import React, { useState, useContext } from 'react';
+
+// Components
 import Pokemons from '../../component/pokemons/Pokemons';
-import Filters from '../../component/filters/Filters';
 import DetailsWindow from '../../component/details-window/DetailsWindow';
 
-import { DetailsWindowContext } from '../../context/DetailsWindowContext';
+// Interfaces
 import { Pokemon } from '../../interface/Pokemon';
 
-import { useContext } from 'react';
+// Contexts
+import { DetailsWindowContext } from '../../context/DetailsWindowContext';
 import { ThemeContext } from './../../context/ThemeContext'
 
+// Actuall function
 export default function Dashboard() {
   const initial_pokemon = {
     abilities: [],
@@ -27,7 +32,6 @@ export default function Dashboard() {
 
   return (
     <DetailsWindowContext.Provider value={{ pokemon, setPokemon }}>
-      {/* <Filters /> */}
       <div className={`dashboard dashboard_${theme}`}>
         <div className="container">
           <div className="list">

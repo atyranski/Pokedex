@@ -1,9 +1,14 @@
+// Styles
 import './style.scss';
-import Cookies from 'universal-cookie';
 
+// React components
 import React from 'react';
+
+// Contexts
 import { useThemeContext } from '../../context/ThemeContext';
 
+// Others
+import Cookies from 'universal-cookie';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 

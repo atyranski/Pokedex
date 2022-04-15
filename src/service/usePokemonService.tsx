@@ -12,7 +12,6 @@ export const useGetPokemonService = ( pokemon: Pokemon) => {
     fetch('https://pokeapi.co/api/v2/pokemon/' + pokemon.name)
       .then(response => response.json())
       .then(response => {
-        // console.log(response);
         const newPokemon: Pokemon = {
           id: response.id,
           name: response.name,
@@ -27,8 +26,7 @@ export const useGetPokemonService = ( pokemon: Pokemon) => {
             return type.type.name;
           }),
         }
-        // setResult({ status: 'loaded', payload: response })
-        // console.log(newPokemon);
+
         setResult({ status: 'loaded', payload: newPokemon })
       } )
       .catch(error => setResult({ status: 'error', error }));

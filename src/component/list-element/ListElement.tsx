@@ -1,15 +1,21 @@
+// Styles
 import './style.scss';
 
-import React from 'react';
+// React components
+import React, { useContext } from 'react';
 
+// Components
+import LoadingIndicator from '../loading-indicator/LoadingIndicator';
+
+// Interfaces
 import { Pokemon } from '../../interface/Pokemon';
+
+// Services
 import usePokemonService from '../../service/usePokemonService';
 
+// Contexts
 import { useDetailsWindowContext } from '../../context/DetailsWindowContext';
-
-import { useContext } from 'react';
 import { ThemeContext } from './../../context/ThemeContext'
-import LoadingIndicator from '../loading-indicator/LoadingIndicator';
 
 type Props = {
     pokemon: Pokemon;

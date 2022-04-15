@@ -1,14 +1,20 @@
+// Styles
 import './style.scss';
 
-import logo from '../../image/logo/icon_64.png';
-
-import React from 'react';
+// React components
+import React, { useContext }  from 'react';
 import { Link } from "react-router-dom"
 
+// Components
 import { ThemeToggle } from './../theme-toggle/ThemeToggle';
-import { useContext } from 'react';
+
+// Contexts
 import { ThemeContext } from './../../context/ThemeContext';
 
+// Others
+import logo from '../../image/logo/icon_64.png';
+
+// Actuall function
 export default function Navbar() {
   const { theme } = useContext(ThemeContext);
 

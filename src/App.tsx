@@ -1,6 +1,4 @@
-import './App.scss';
-import Cookies from 'universal-cookie';
-
+// Styles
 // React components
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -12,10 +10,14 @@ import PageNotFound from './page/page-not-found/PageNotFound';
 // Components
 import Navbar from './component/navbar/Navbar';
 
+// Interfaces
+// Services
 // Contexts
 import { ThemeContext } from './context/ThemeContext';
 
-// Actuall app
+// Others
+import Cookies from 'universal-cookie';
+
 function App() {
   const cookies = new Cookies();
   if(cookies.get('theme') == undefined) cookies.set('theme', 'light', { path: '/' });

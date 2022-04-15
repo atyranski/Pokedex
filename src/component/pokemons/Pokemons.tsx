@@ -1,12 +1,20 @@
+// Styles
 import './style.scss';
-import React, { useState }from 'react';
-import { Pokemon } from '../../interface/Pokemon';
-import usePokemonsService from '../../service/usePokemonsService';
 
+// React components
+import React, { useState, useContext }from 'react';
+
+// Components
 import ListElement from '../list-element/ListElement';
 import LoadingIndicator from '../loading-indicator/LoadingIndicator';
 
-import { useContext } from 'react';
+// Interfaces
+import { Pokemon } from '../../interface/Pokemon';
+
+// Services
+import usePokemonsService from '../../service/usePokemonsService';
+
+// Contexts
 import { ThemeContext } from './../../context/ThemeContext'
 
 const Pokemons: React.FC<{}> = () => {

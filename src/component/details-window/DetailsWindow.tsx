@@ -1,13 +1,16 @@
+// Styles
 import './style.scss';
 
-import React from 'react';
+// React components
+import React, { useContext } from 'react';
 
+// Contexts
 import { useDetailsWindowContext } from '../../context/DetailsWindowContext';
+import { ThemeContext } from './../../context/ThemeContext'
+
+// Others
 import placholder_black from '../../image/details/placeholder_black.png';
 import placholder_white from '../../image/details/placeholder_white.png';
-
-import { useContext } from 'react';
-import { ThemeContext } from './../../context/ThemeContext'
 
 export const DetailsWindow = () => {
     const { pokemon } = useDetailsWindowContext();

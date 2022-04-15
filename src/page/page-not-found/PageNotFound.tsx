@@ -1,12 +1,16 @@
+// Styles
 import './style.scss';
 
-import React from 'react';
+// React components
+import React, { useContext } from 'react';
 
-import surprised_pikatchu from '../../image/utils/surprised_pikatchu.jpg';
-
-import { useContext } from 'react';
+// Contexts
 import { ThemeContext } from './../../context/ThemeContext'
 
+// Others
+import surprised_pikatchu from '../../image/utils/surprised_pikatchu.jpg';
+
+// Actuall function
 export default function PageNotFound() {
   const { theme } = useContext(ThemeContext);
 

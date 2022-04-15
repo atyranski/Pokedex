@@ -1,10 +1,13 @@
+// Styles
 import './style.scss';
 
-import React from 'react';
+// React components
+import React, { useContext } from 'react';
 
-import { useContext } from 'react';
+// Contexts
 import { ThemeContext } from './../../context/ThemeContext'
 
+// Others
 import indicator_black from '../../image/utils/indicator_black.png';
 import indicator_white from '../../image/utils/indicator_white.png';
 
